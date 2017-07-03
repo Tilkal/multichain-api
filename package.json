@@ -15,6 +15,13 @@
     "type": "git",
     "url": "https://github.com/Tilkal/multichain-api.git"
   },
+  "scripts": {
+    "build": "tsc --project src && tsc --project test",
+    "lint": "tslint --fix --project src && tslint --fix --project test",
+    "test": "mocha --compilers ts:ts-node/register",
+    "docs": "cd src && typedoc --out ../dist/docs",
+    "clean": "rimraf dist"
+  },
   "devDependencies": {
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
@@ -22,6 +29,7 @@
     "@types/sinon": "^2.3.2",
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
+    "rimraf": "^2.6.1",
     "sinon":"^2.3.6",
     "ts-node": "^3.1.0",
     "tslint": "^5.4.3",
