@@ -1,0 +1,31 @@
+{
+  "name": "multichain-api",
+  "version": "1.0.0-alpha.1",
+  "description": "MultiChain JSON-RPC Client",
+  "keywords": [
+    "MultiChain",
+    "blockchain"
+  ],
+  "bugs": "https://github.com/Tilkal/multichain-api/issues",
+  "license": "MIT",
+  "author": "Tilkal SAS",
+  "main": "./dist/src/main.js",
+  "types": "./dist/src/main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tilkal/multichain-api.git"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.7",
+    "@types/sinon": "^2.3.2",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "sinon":"^2.3.6",
+    "ts-node": "^3.1.0",
+    "tslint": "^5.4.3",
+    "typedoc": "^0.7.1",
+    "typescript": "^2.4.1"
+  }
+}
