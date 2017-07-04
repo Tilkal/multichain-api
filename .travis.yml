@@ -4,11 +4,13 @@ node_js:
 - '8'
 - '7'
 - '6'
+
 script:
 - npm run build
 - npm run lint
 - npm run test
 
 notifications:
+  email: false
   slack:
     secure: N18EJUyjMZA6PykhatqGnC+3BUaz5r7HxqPUcn13UkGpDHcpPyUeBIeAa5QkG4t2tD8EIJ+Ux2qXPJKpxvwvAMdh6i+Et8zvWdzjXs8VbQYcFjIjP8dOrwaCfOia34he7IKXXdzNsN9UZvcWYpJLyB11ELE9voio8o9DE1sbmEdYYEwoVB86OpX28w/gawSNkJExtZzZPN8kDKpAtKvs10ofXzTlTofKBiVuocn6ixW9akyT7PIIfhuQl9iQscf6LlyP0z4LBUnKB04tHA6e+GFBA06SPreIL2jvaAXTNThRk8h9m43QpEKfD7qc+arg7MAnZpxGkAufepS4GlWHQN3g2Akas1IvZQD8+RIaXnxS+KSaRIZh4JdjWd6oWGs3vS96U5GJU6whmIsbnJGurIGpaiVPRJ5Vkndc0XUVO/sSsmP5vyR/4ScEza2oIoBIo0AQnaPiZX5aHCk82Nq2nJM1zpN09f1LWpZRvnZojLZyiU0eMy2srSc/emM7l8u/vguKxPscb9lOqgidF+A/fiVtxj/CEL5/5SJldulCsVX4gG4q1VV5EfTxxkKAw0VuPD8bDkX12+SXrRrFi7YULA/ousVOHKA0i0ugVlecKrX5LCkTiCQk9Qmky4+p2U2AyZu9ke2apzxrH3g7ex6vuxWYv2t9oK8TS2SfE06GwcI=
