@@ -1,6 +1,7 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "interface-name": [true, "never-prefix"],
     "quotemark": [true, "single", "avoid-escape"],
     "semicolon": [true, "never"]
   }

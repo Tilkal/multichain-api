@@ -63,5 +63,5 @@ export enum ErrorCode {
   /**
    * The request body is an invalid JSON document.
    */
-  ParseError = -32700
+  ParseError = -32700,
 }
