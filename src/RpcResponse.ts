@@ -1,12 +1,11 @@
 /**
  * JSON-RPC response.
- * @param T Type of the `result` property.
  */
-export interface RpcResponse<T = any> {
+export interface RpcResponse {
   /**
    * Result of the invoked method, if successful.
    */
-  readonly result: T | null
+  readonly result: any
 
   /**
    * Error object, if method invocation failed.

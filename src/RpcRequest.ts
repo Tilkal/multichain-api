@@ -1,8 +1,7 @@
 /**
  * JSON-RPC request.
- * @param T Type of the `params` property.
  */
-export interface RpcRequest<T extends any[] | undefined = any[] | undefined> {
+export interface RpcRequest {
   /**
    * Name of the method to invoke.
    */
@@ -11,7 +10,7 @@ export interface RpcRequest<T extends any[] | undefined = any[] | undefined> {
   /**
    * List of arguments to invoke the method with, if any.
    */
-  readonly params?: T
+  readonly params?: any[]
 
   /**
    * Request identifier.
