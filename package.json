@@ -18,9 +18,12 @@
   "scripts": {
     "build": "tsc --project src && tsc --project test",
     "lint": "tslint --fix --project src && tslint --fix --project test",
-    "test": "mocha --compilers ts:ts-node/register",
+    "test": "nyc mocha --compilers ts:ts-node/register",
     "docs": "cd src && typedoc --out ../dist/docs",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "ci:build": "tsc --project src && tsc --project test",
+    "ci:lint": "tslint --project src && tslint --project test",
+    "ci:test": "nyc --reporter=lcovonly mocha --compilers ts:ts-node/register"
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
@@ -29,8 +32,9 @@
     "@types/sinon": "^2.3.2",
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
     "rimraf": "^2.6.1",
-    "sinon":"^2.3.6",
+    "sinon": "^2.3.6",
     "ts-node": "^3.1.0",
     "tslint": "^5.4.3",
     "typedoc": "^0.7.1",

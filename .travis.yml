@@ -1,14 +1,14 @@
 language: node_js
 
 node_js:
-- '8'
-- '7'
-- '6'
+  - '8'
+  - '7'
+  - '6'
 
 script:
-- npm run build
-- npm run lint
-- npm run test
+  - npm run ci:build
+  - npm run ci:lint
+  - npm run ci:test
 
 notifications:
   email: false
