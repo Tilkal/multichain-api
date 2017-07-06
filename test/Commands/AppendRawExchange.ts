@@ -1,4 +1,5 @@
 import { AppendRawExchange } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/AppendRawExchange()', function() {
   it(

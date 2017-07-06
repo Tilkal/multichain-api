@@ -1,4 +1,5 @@
 import { GetTotalBalances } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetTotalBalances()', function() {
   it(

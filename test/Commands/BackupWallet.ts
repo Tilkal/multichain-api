@@ -1,4 +1,5 @@
 import { BackupWallet } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/BackupWallet()', function() {
   it(

@@ -1,4 +1,5 @@
 import { Ping } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/Ping()', function() {
   it(

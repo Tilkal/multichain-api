@@ -1,4 +1,5 @@
 import { ListLockUnspent } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListLockUnspent()', function() {
   it(

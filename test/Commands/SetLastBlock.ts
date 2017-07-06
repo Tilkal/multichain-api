@@ -1,4 +1,5 @@
 import { SetLastBlock } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/SetLastBlock()', function() {
   it(

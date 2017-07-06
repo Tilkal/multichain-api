@@ -1,4 +1,5 @@
 import { GetMemPoolInfo } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetMemPoolInfo()', function() {
   it(

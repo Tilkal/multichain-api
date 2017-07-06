@@ -1,4 +1,5 @@
 import { Stop } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/Stop()', function() {
   it(

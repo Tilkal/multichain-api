@@ -1,4 +1,5 @@
 import { VerifyMessage } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/VerifyMessage()', function() {
   it(

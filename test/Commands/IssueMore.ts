@@ -1,4 +1,5 @@
 import { IssueMore } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/IssueMore()', function() {
   it(

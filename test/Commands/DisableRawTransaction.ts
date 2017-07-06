@@ -1,4 +1,5 @@
 import { DisableRawTransaction } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/DisableRawTransaction()', function() {
   it(

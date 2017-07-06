@@ -1,4 +1,5 @@
 import { AppendRawChange } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/AppendRawChange()', function() {
   it(

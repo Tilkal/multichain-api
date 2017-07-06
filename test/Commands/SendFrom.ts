@@ -1,4 +1,5 @@
 import { SendFrom } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/SendFrom()', function() {
   it(

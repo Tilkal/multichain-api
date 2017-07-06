@@ -1,4 +1,5 @@
 import { SetRuntimeParam } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/SetRuntimeParam()', function() {
   it(

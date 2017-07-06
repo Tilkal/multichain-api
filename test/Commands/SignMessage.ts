@@ -1,4 +1,5 @@
 import { SignMessage } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/SignMessage()', function() {
   it(

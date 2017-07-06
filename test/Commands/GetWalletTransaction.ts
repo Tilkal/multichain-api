@@ -1,4 +1,5 @@
 import { GetWalletTransaction } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetWalletTransaction()', function() {
   it(

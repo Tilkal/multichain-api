@@ -1,4 +1,5 @@
 import { GetWalletInfo } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetWalletInfo()', function() {
   it(

@@ -1,3 +1,7 @@
+import { RpcRequest } from '../RpcRequest'
+
+export type Signature = (...params: any[]) => RpcRequest
+
 export * from './AddMultiSigAddress'
 export * from './AddNode'
 export * from './AppendRawChange'

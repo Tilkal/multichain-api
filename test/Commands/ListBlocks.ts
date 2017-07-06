@@ -1,4 +1,5 @@
 import { ListBlocks } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListBlocks()', function() {
   it(

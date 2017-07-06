@@ -1,4 +1,5 @@
 import { ListStreamKeyItems } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListStreamKeyItems()', function() {
   it(

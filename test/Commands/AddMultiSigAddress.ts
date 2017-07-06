@@ -1,4 +1,5 @@
 import { AddMultiSigAddress } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/AddMultiSigAddress()', function() {
   it(

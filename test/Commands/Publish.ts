@@ -1,4 +1,5 @@
 import { Publish } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/Publish()', function() {
   it(

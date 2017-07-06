@@ -1,4 +1,5 @@
 import { ListAddressTransactions } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListAddressTransactions()', function() {
   it(

@@ -1,4 +1,5 @@
 import { CreateKeyPairs } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/CreateKeyPairs()', function() {
   it(

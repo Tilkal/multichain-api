@@ -1,4 +1,5 @@
 import { ListPermissions } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListPermissions()', function() {
   it(

@@ -1,4 +1,5 @@
 import { ListAssetTransactions } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListAssetTransactions()', function() {
   it(

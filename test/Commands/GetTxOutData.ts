@@ -1,4 +1,5 @@
 import { GetTxOutData } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetTxOutData()', function() {
   it(

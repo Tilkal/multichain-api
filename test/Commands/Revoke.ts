@@ -1,4 +1,5 @@
 import { Revoke } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/Revoke()', function() {
   it(

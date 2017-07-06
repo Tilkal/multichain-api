@@ -1,4 +1,5 @@
 import { CombineUnspent } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/CombineUnspent()', function() {
   it(

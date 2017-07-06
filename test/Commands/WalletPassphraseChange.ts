@@ -1,4 +1,5 @@
 import { WalletPassphraseChange } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/WalletPassphraseChange()', function() {
   it(

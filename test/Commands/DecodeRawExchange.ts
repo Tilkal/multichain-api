@@ -1,4 +1,5 @@
 import { DecodeRawExchange } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/DecodeRawExchange()', function() {
   it(

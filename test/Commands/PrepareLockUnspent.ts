@@ -1,4 +1,5 @@
 import { PrepareLockUnspent } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/PrepareLockUnspent()', function() {
   it(

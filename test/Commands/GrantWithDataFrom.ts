@@ -1,4 +1,5 @@
 import { GrantWithDataFrom } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GrantWithDataFrom()', function() {
   it(

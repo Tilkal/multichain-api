@@ -1,4 +1,5 @@
 import { EncryptWallet } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/EncryptWallet()', function() {
   it(

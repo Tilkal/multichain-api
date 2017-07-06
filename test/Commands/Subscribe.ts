@@ -1,4 +1,5 @@
 import { Subscribe } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/Subscribe()', function() {
   it(

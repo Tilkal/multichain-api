@@ -1,4 +1,5 @@
 import { GetAddressTransaction } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetAddressTransaction()', function() {
   it(

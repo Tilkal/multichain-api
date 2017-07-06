@@ -1,4 +1,5 @@
 import { ListStreamPublisherItems } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListStreamPublisherItems()', function() {
   it(

@@ -1,4 +1,5 @@
 import { WalletLock } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/WalletLock()', function() {
   it(

@@ -1,4 +1,5 @@
 import { SendAsset } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/SendAsset()', function() {
   it(

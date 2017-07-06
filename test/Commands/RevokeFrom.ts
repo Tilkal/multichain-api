@@ -1,4 +1,5 @@
 import { RevokeFrom } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/RevokeFrom()', function() {
   it(

@@ -1,4 +1,5 @@
 import { GetRawTransaction } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetRawTransaction()', function() {
   it(

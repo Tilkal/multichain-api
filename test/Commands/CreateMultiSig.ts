@@ -1,4 +1,5 @@
 import { CreateMultiSig } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/CreateMultiSig()', function() {
   it(

@@ -1,4 +1,5 @@
 import { ImportWallet } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ImportWallet()', function() {
   it(

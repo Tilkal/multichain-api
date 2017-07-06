@@ -1,4 +1,5 @@
 import { SendWithData } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/SendWithData()', function() {
   it(

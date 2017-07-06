@@ -1,4 +1,5 @@
 import { DumpWallet } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/DumpWallet()', function() {
   it(

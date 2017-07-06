@@ -1,4 +1,5 @@
 import { GetAddresses } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetAddresses()', function() {
   it(

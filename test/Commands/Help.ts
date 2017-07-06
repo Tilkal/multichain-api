@@ -1,4 +1,5 @@
 import { Help } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/Help()', function() {
   it(

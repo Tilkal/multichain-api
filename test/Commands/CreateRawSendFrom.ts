@@ -1,4 +1,5 @@
 import { CreateRawSendFrom } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/CreateRawSendFrom()', function() {
   it(

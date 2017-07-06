@@ -1,4 +1,5 @@
 import { ListWalletTransactions } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/ListWalletTransactions()', function() {
   it(

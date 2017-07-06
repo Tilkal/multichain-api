@@ -1,4 +1,5 @@
 import { GetAssetTransaction } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/GetAssetTransaction()', function() {
   it(

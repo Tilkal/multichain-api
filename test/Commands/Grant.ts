@@ -1,4 +1,5 @@
 import { Grant } from '../../src/Commands'
+import { TestCommand } from '../test-helpers'
 
 describe('/Grant()', function() {
   it(
