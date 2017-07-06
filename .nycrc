@@ -1,8 +1,9 @@
 {
-  "reporter": ["text-summary"],
+  "report-dir": "dist/coverage",
   "all": true,
   "exclude": ["dist/**"],
   "include": ["src/**/*.ts"],
   "require": ["ts-node/register"],
-  "extension": [".ts"]
+  "extension": [".ts"],
+  "temp-directory": "dist/coverage/temp"
 }
