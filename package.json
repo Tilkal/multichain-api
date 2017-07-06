@@ -18,12 +18,12 @@
   "scripts": {
     "build": "tsc --project src && tsc --project test",
     "lint": "tslint --fix --project src && tslint --fix --project test",
-    "test": "nyc --reporter=text-summary mocha --compilers ts:ts-node/register",
+    "test": "cd test && nyc --reporter=text-summary mocha test.ts --compilers ts:ts-node/register",
     "docs": "cd src && typedoc --out ../dist/docs",
     "clean": "rimraf dist",
     "ci:build": "tsc --project src && tsc --project test",
     "ci:lint": "tslint --project src && tslint --project test",
-    "ci:test": "nyc --reporter=json mocha --compilers ts:ts-node/register && codecov -f dist/coverage/coverage-final.json"
+    "ci:test": "cd test && nyc --reporter=json mocha test.ts --compilers ts:ts-node/register && codecov -f dist/coverage/coverage-final.json"
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
