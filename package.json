@@ -9,8 +9,8 @@
   "bugs": "https://github.com/Tilkal/multichain-api/issues",
   "license": "MIT",
   "author": "Tilkal SAS",
-  "main": "./dist/src/main.js",
-  "types": "./dist/src/main.d.ts",
+  "main": "main.js",
+  "types": "main.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Tilkal/multichain-api.git"

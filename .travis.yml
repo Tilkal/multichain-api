@@ -10,6 +10,17 @@ script:
   - npm run ci:lint
   - npm run ci:test
 
+before_deploy:
+  - mv dist/src/* .
+
+deploy:
+  provider: npm
+  api_key:
+    secure: "hcyLMUTD+m7Gw9AEu6myKDAKthlbydvlhF0E19TfAkj7HAalUTQ0y1gKhZGOMhtZI/1ez1WIb6qmAMr78ZR12vQHoxoj3KaZqp/LGQIBHONPrXxkdZBg7SjW9Rnbt5iKz4G/qEgWx5w95iWB1R1k3PS4Rf6atCeRAu8GZppQ4as238jdwOXyqn041Bh5nbj4XG2TeQo/e/hW41bhglVxRTA3SFMHVMzfA/NcRBB+6deO1xgIFkqgA8yLQbSCmJgL9VKA5SduCDQd5zou9J0wbbGTVPadJDMAR4yK2azpTX5vv4bu5AiRoBY4QLh66D9lhZlodSsak3vKhA+mjzWneuugeteK2ZyaTkR2nYWh+bqPvou9dA4CMdgpI3UZcurMN8FTg01lnOzCtbfzkRSS0jgQaPpNiZhq2kFC+hOxe6Be4W6ffvfEm3KbjFgIyJALvspOn+yKweH0x58+dvnNEga906w2Q2Kxe8b3nL74gy+oTdADmyrovPVVux3x58EpU1JrdpSuzsg3e5UVPl0MdWPQ8zXuYSmwwJxqeStAK6HMVXn/mPoKLqTo7PNnDc9DhG5P4Er3OgIxlaNIc27XtrXKM8w4JMw/ZklfiRPsw76TJv8Sy5GpDSZ0h4/dAG14Zec64w6i96xN6tOVcrN3fZw7y8KUkWmVHEdzEsPpveY="
+  skip_cleanup: true
+  on:
+    tags: true
+
 notifications:
   email: false
   slack:
