@@ -6,6 +6,7 @@
     "MultiChain",
     "blockchain"
   ],
+  "homepage": "https://tilkal.github.io/multichain-api/",
   "bugs": "https://github.com/Tilkal/multichain-api/issues",
   "license": "MIT",
   "author": "Tilkal SAS",
