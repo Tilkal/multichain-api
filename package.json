@@ -28,7 +28,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^8.0.7",
+    "@types/node": "^8.0.8",
     "@types/sinon": "^2.3.2",
     "chai": "^4.0.2",
     "codecov": "^2.2.0",
@@ -37,8 +37,8 @@
     "nyc": "^11.0.3",
     "rimraf": "^2.6.1",
     "sinon": "^2.3.6",
-    "ts-node": "^3.1.0",
-    "tslint": "^5.4.3",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
     "typedoc": "^0.7.1",
     "typescript": "^2.4.1"
   }
