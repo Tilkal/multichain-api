@@ -1,4 +1,9 @@
+import * as http from 'http'
+import * as https from 'https'
 import * as Cmd from './Commands'
+import { RpcError } from './RpcError'
+import { RpcRequest } from './RpcRequest'
+import { RpcResponse } from './RpcResponse'
 
 /**
  * Connection settings.
@@ -772,5 +777,40 @@ export interface RpcClientInstance {
  * @returns A JSON-RPC client.
  */
 export function RpcClient(settings: ConnectionSettings): RpcClientInstance {
-  throw new Error('Not Implemented')
+  const options: http.RequestOptions = {
+    protocol: `${ settings.protocol || 'http' }:`,
+    host: settings.host,
+    port: settings.port || 8570,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    auth: `${ settings.username || 'multichainrpc' }:${ settings.password }`,
+  }
+
+  const SendRequest = options.protocol === 'http:' ? http.request : https.request
+
+  return (request: RpcRequest) => {
+    return new Promise<RpcResponse>((resolve, reject) => {
+      function HandleMessage(message: http.IncomingMessage) {
+        let body = ''
+
+        message
+          .setEncoding('utf8')
+          .on('data', chunk => body += chunk)
+          .on('error', reject)
+          .on('end', () => HandleResponse(message, body))
+      }
+
+      function HandleResponse(message: http.IncomingMessage, body: string) {
+        try {
+          resolve(JSON.parse(body))
+        } catch (error) {
+          reject(new RpcError(Number(message.statusCode), String(message.statusMessage), message.headers, body))
+        }
+      }
+
+      SendRequest(options, HandleMessage)
+        .on('error', reject)
+        .end(JSON.stringify(request))
+    })
+  }
 }

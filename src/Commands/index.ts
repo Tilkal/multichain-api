@@ -1,6 +1,6 @@
 import { RpcRequest } from '../RpcRequest'
 
-export type Signature = (...params: any[]) => RpcRequest
+export type CommandSignature = (...params: any[]) => RpcRequest
 
 export * from './AddMultiSigAddress'
 export * from './AddNode'
