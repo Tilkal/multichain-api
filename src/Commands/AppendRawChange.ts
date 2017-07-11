@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface AppendRawChangeRequest extends RpcRequest {
   readonly method: 'appendrawchange'
-  readonly params?: any[]
+  readonly params: [string, string, number | undefined]
 }
 
 /**
@@ -21,6 +21,7 @@ export interface AppendRawChangeResponse extends RpcResponse {
  */
 export type AppendRawChangeResult = any
 
-export function AppendRawChange(...params: any[]): AppendRawChangeRequest {
-  return params.length === 0 ? { method: 'appendrawchange' } : { method: 'appendrawchange', params }
+export function AppendRawChange(transaction: string, address: string, fee?: number): AppendRawChangeRequest {
+  const params: any = [transaction, address, fee].filter(v => v !== undefined)
+  return { method: 'appendrawchange', params }
 }
