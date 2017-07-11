@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface AddMultiSigAddressRequest extends RpcRequest {
   readonly method: 'addmultisigaddress'
-  readonly params?: any[]
+  readonly params: [number, string[]]
 }
 
 /**
@@ -21,6 +21,12 @@ export interface AddMultiSigAddressResponse extends RpcResponse {
  */
 export type AddMultiSigAddressResult = any
 
-export function AddMultiSigAddress(...params: any[]): AddMultiSigAddressRequest {
-  return params.length === 0 ? { method: 'addmultisigaddress' } : { method: 'addmultisigaddress', params }
+/**
+ * Adds a new P2SH multisig address to the wallet.
+ * @param requiredSignatures Minimum number of signatures required to spend the outputs sent to the address.
+ * @param keys List of public keys (or addresses) that can be used to spend the outputs sent to the address.
+ * @returns A JSON-RPC request for the *addmultisigaddress* command.
+ */
+export function AddMultiSigAddress(requiredSignatures: number, keys: string[]): AddMultiSigAddressRequest {
+  return { method: 'addmultisigaddress', params: [requiredSignatures, keys] }
 }
