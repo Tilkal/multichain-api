@@ -8,7 +8,6 @@ export function TestCommand(result: RpcRequest, command: CommandSignature, args?
   if (args === undefined) {
     expect(result).to.not.have.property('params')
   } else {
-    expect(result).to.have.property('params')
-    expect(result.params).to.have.same.deep.ordered.members(args)
+    expect(result).to.have.property('params').and.to.have.same.deep.ordered.members(args)
   }
 }
