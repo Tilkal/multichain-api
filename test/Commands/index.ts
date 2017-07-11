@@ -113,7 +113,7 @@ describe('/Commands', function() {
     'should return a module with the correct shape',
     function() {
       for (const command of commandList) {
-        expect(Commands).to.have.property(command).and.to.be.a('function')
+        expect(Commands).to.have.property(command, require(`../../src/Commands/${ command }`)[command])
       }
     },
   )
