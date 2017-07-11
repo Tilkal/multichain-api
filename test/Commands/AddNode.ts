@@ -7,21 +7,21 @@ describe('/AddNode', function() {
     function() {
       const host = '192.168.0.1:8570'
 
-      // Signature 1: [string, 'add']
+      // Signature 1a: [string, 'add']
       TestCommand(
         AddNode(host, 'add'),
         AddNode,
         [host, 'add'],
       )
 
-      // Signature 2: [string, 'remove']
+      // Signature 1b: [string, 'remove']
       TestCommand(
         AddNode(host, 'remove'),
         AddNode,
         [host, 'remove'],
       )
 
-      // Signature 3: [string, 'onetry']
+      // Signature 1c: [string, 'onetry']
       TestCommand(
         AddNode(host, 'onetry'),
         AddNode,
