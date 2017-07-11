@@ -3,11 +3,11 @@
  */
 export class RpcError extends Error {
   /**
-   * Creates an instance of [[RpcError]]
-   * @param status Status code of the HTTP response
-   * @param statusText Status text of the HTTP response
-   * @param headers Headers of the HTTP response
-   * @param body Body of the HTTP response
+   * Creates an instance of [[RpcError]].
+   * @param status Status code of the HTTP response.
+   * @param statusText Status text of the HTTP response.
+   * @param headers Headers of the HTTP response.
+   * @param body Body of the HTTP response.
    */
   constructor(
     public readonly status: number,
