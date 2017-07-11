@@ -1,9 +1,9 @@
 import { RevokeFrom } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/RevokeFrom()', function() {
+describe('/RevokeFrom', function() {
   it(
-    'should return a properly configured JSON-RPC request for the revokefrom API command',
+    'RevokeFrom() should return a properly configured JSON-RPC request',
     function() {
       const from = 'address1'
       const to = 'address2'

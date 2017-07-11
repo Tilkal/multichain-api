@@ -1,9 +1,9 @@
 import { ListStreamItems } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/ListStreamItems()', function() {
+describe('/ListStreamItems', function() {
   it(
-    'should return a properly configured JSON-RPC request for the liststreamitems API command',
+    'ListStreamItems() should return a properly configured JSON-RPC request',
     function() {
       const stream = 'stream'
       const verbose = true

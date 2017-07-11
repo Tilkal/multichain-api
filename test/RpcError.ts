@@ -3,7 +3,7 @@ import { RpcError } from '../src/RpcError'
 
 describe('/RpcError', function() {
   it(
-    'should return a properly constructed instance',
+    'RpcError should return a properly constructed instance',
     function() {
       const status = 401
       const statusText = 'Unauthorized'

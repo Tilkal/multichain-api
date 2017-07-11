@@ -1,9 +1,9 @@
 import { AddMultiSigAddress } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/AddMultiSigAddress()', function() {
+describe('/AddMultiSigAddress', function() {
   it(
-    'should return a properly configured JSON-RPC request for the addmultisigaddress API command',
+    'AddMultiSigAddress() should return a properly configured JSON-RPC request',
     function() {
       const requiredSignatures = 2
       const keys = ['key1', 'key2', 'key3']

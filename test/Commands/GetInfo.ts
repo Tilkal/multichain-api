@@ -1,8 +1,8 @@
 import { GetInfo } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/GetInfo()', function() {
+describe('/GetInfo', function() {
   it(
-    'should return a properly configured JSON-RPC request for the getinfo API command',
+    'GetInfo() should return a properly configured JSON-RPC request',
   )
 })

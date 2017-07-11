@@ -1,9 +1,9 @@
 import { CreateKeyPairs } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/CreateKeyPairs()', function() {
+describe('/CreateKeyPairs', function() {
   it(
-    'should return a properly configured JSON-RPC request for the createkeypairs API command',
+    'CreateKeyPairs() should return a properly configured JSON-RPC request',
     function() {
       const count = 1
 

@@ -1,8 +1,8 @@
 import { SetRuntimeParam } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/SetRuntimeParam()', function() {
+describe('/SetRuntimeParam', function() {
   it(
-    'should return a properly configured JSON-RPC request for the setruntimeparam API command',
+    'SetRuntimeParam() should return a properly configured JSON-RPC request',
   )
 })

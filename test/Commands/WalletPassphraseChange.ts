@@ -1,9 +1,9 @@
 import { WalletPassphraseChange } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/WalletPassphraseChange()', function() {
+describe('/WalletPassphraseChange', function() {
   it(
-    'should return a properly configured JSON-RPC request for the walletpassphrasechange API command',
+    'WalletPassphraseChange() should return a properly configured JSON-RPC request',
     function() {
       const oldPassphrase = 'old_passphrase'
       const newPassphrase = 'new_passphrase'

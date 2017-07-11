@@ -1,8 +1,8 @@
 import { GetAddedNodeInfo } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/GetAddedNodeInfo()', function() {
+describe('/GetAddedNodeInfo', function() {
   it(
-    'should return a properly configured JSON-RPC request for the getaddednodeinfo API command',
+    'GetAddedNodeInfo() should return a properly configured JSON-RPC request',
   )
 })

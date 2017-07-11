@@ -1,9 +1,9 @@
 import { BackupWallet } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/BackupWallet()', function() {
+describe('/BackupWallet', function() {
   it(
-    'should return a properly configured JSON-RPC request for the backupwallet API command',
+    'BackupWallet() should return a properly configured JSON-RPC request',
     function() {
       const filename = 'filename'
 

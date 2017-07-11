@@ -1,9 +1,9 @@
 import { ListAddressTransactions } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/ListAddressTransactions()', function() {
+describe('/ListAddressTransactions', function() {
   it(
-    'should return a properly configured JSON-RPC request for the listaddresstransactions API command',
+    'ListAddressTransactions() should return a properly configured JSON-RPC request',
     function() {
       const address = 'address'
       const count = 10

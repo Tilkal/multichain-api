@@ -1,9 +1,9 @@
 import { SetLastBlock } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/SetLastBlock()', function() {
+describe('/SetLastBlock', function() {
   it(
-    'should return a properly configured JSON-RPC request for the setlastblock API command',
+    'SetLastBlock() should return a properly configured JSON-RPC request',
     function() {
       const hash = 'hash'
       const height = 0

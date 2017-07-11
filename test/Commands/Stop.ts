@@ -1,9 +1,9 @@
 import { Stop } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/Stop()', function() {
+describe('/Stop', function() {
   it(
-    'should return a properly configured JSON-RPC request for the stop API command',
+    'Stop() should return a properly configured JSON-RPC request',
     function() {
       // Signature 1: undefined
       TestCommand(

@@ -1,9 +1,9 @@
 import { SendAssetFrom } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/SendAssetFrom()', function() {
+describe('/SendAssetFrom', function() {
   it(
-    'should return a properly configured JSON-RPC request for the sendassetfrom API command',
+    'SendAssetFrom() should return a properly configured JSON-RPC request',
     function() {
       const from = 'address1'
       const to = 'address2'

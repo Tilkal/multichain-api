@@ -1,8 +1,8 @@
 import { IssueFrom } from '../../src/Commands'
 import { TestCommand } from '../test-helpers'
 
-describe('/IssueFrom()', function() {
+describe('/IssueFrom', function() {
   it(
-    'should return a properly configured JSON-RPC request for the issuefrom API command',
+    'IssueFrom() should return a properly configured JSON-RPC request',
   )
 })
