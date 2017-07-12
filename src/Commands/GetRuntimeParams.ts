@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetRuntimeParamsRequest extends RpcRequest {
   readonly method: 'getruntimeparams'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetRuntimeParamsResponse extends RpcResponse {
  */
 export type GetRuntimeParamsResult = any
 
-export function GetRuntimeParams(...params: any[]): GetRuntimeParamsRequest {
-  return params.length === 0 ? { method: 'getruntimeparams' } : { method: 'getruntimeparams', params }
+export function GetRuntimeParams(): GetRuntimeParamsRequest {
+  return { method: 'getruntimeparams' }
 }
