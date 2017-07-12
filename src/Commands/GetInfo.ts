@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetInfoRequest extends RpcRequest {
   readonly method: 'getinfo'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetInfoResponse extends RpcResponse {
  */
 export type GetInfoResult = any
 
-export function GetInfo(...params: any[]): GetInfoRequest {
-  return params.length === 0 ? { method: 'getinfo' } : { method: 'getinfo', params }
+export function GetInfo(): GetInfoRequest {
+  return { method: 'getinfo' }
 }
