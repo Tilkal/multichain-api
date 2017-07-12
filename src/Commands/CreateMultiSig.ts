@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface CreateMultiSigRequest extends RpcRequest {
   readonly method: 'createmultisig'
-  readonly params?: any[]
+  readonly params: [number, string[]]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface CreateMultiSigResponse extends RpcResponse {
  */
 export type CreateMultiSigResult = any
 
-export function CreateMultiSig(...params: any[]): CreateMultiSigRequest {
-  return params.length === 0 ? { method: 'createmultisig' } : { method: 'createmultisig', params }
+export function CreateMultiSig(requiredSignatures: number, keys: string[]): CreateMultiSigRequest {
+  return { method: 'createmultisig', params: [requiredSignatures, keys] }
 }
