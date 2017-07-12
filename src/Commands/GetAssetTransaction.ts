@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetAssetTransactionRequest extends RpcRequest {
   readonly method: 'getassettransaction'
-  readonly params?: any[]
+  readonly params: [string, string, boolean | undefined]
 }
 
 /**
@@ -21,6 +21,7 @@ export interface GetAssetTransactionResponse extends RpcResponse {
  */
 export type GetAssetTransactionResult = any
 
-export function GetAssetTransaction(...params: any[]): GetAssetTransactionRequest {
-  return params.length === 0 ? { method: 'getassettransaction' } : { method: 'getassettransaction', params }
+export function GetAssetTransaction(asset: string, txId: string, verbose?: boolean): GetAssetTransactionRequest {
+  const params: any = [asset, txId, verbose].filter(v => v !== undefined)
+  return { method: 'getassettransaction', params }
 }
