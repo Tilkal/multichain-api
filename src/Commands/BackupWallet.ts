@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface BackupWalletRequest extends RpcRequest {
   readonly method: 'backupwallet'
-  readonly params?: any[]
+  readonly params: [string]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface BackupWalletResponse extends RpcResponse {
  */
 export type BackupWalletResult = any
 
-export function BackupWallet(...params: any[]): BackupWalletRequest {
-  return params.length === 0 ? { method: 'backupwallet' } : { method: 'backupwallet', params }
+export function BackupWallet(filename: string): BackupWalletRequest {
+  return { method: 'backupwallet', params: [filename] }
 }
