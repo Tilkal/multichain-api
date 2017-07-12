@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetBlockchainInfoRequest extends RpcRequest {
   readonly method: 'getblockchaininfo'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetBlockchainInfoResponse extends RpcResponse {
  */
 export type GetBlockchainInfoResult = any
 
-export function GetBlockchainInfo(...params: any[]): GetBlockchainInfoRequest {
-  return params.length === 0 ? { method: 'getblockchaininfo' } : { method: 'getblockchaininfo', params }
+export function GetBlockchainInfo(): GetBlockchainInfoRequest {
+  return { method: 'getblockchaininfo' }
 }
