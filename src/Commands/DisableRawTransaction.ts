@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface DisableRawTransactionRequest extends RpcRequest {
   readonly method: 'disablerawtransaction'
-  readonly params?: any[]
+  readonly params: [string]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface DisableRawTransactionResponse extends RpcResponse {
  */
 export type DisableRawTransactionResult = any
 
-export function DisableRawTransaction(...params: any[]): DisableRawTransactionRequest {
-  return params.length === 0 ? { method: 'disablerawtransaction' } : { method: 'disablerawtransaction', params }
+export function DisableRawTransaction(transaction: string): DisableRawTransactionRequest {
+  return { method: 'disablerawtransaction', params: [transaction] }
 }
