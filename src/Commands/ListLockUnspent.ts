@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface ListLockUnspentRequest extends RpcRequest {
   readonly method: 'listlockunspent'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface ListLockUnspentResponse extends RpcResponse {
  */
 export type ListLockUnspentResult = any
 
-export function ListLockUnspent(...params: any[]): ListLockUnspentRequest {
-  return params.length === 0 ? { method: 'listlockunspent' } : { method: 'listlockunspent', params }
+export function ListLockUnspent(): ListLockUnspentRequest {
+  return { method: 'listlockunspent' }
 }
