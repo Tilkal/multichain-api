@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetWalletInfoRequest extends RpcRequest {
   readonly method: 'getwalletinfo'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetWalletInfoResponse extends RpcResponse {
  */
 export type GetWalletInfoResult = any
 
-export function GetWalletInfo(...params: any[]): GetWalletInfoRequest {
-  return params.length === 0 ? { method: 'getwalletinfo' } : { method: 'getwalletinfo', params }
+export function GetWalletInfo(): GetWalletInfoRequest {
+  return { method: 'getwalletinfo' }
 }
