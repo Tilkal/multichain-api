@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetNetworkInfoRequest extends RpcRequest {
   readonly method: 'getnetworkinfo'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetNetworkInfoResponse extends RpcResponse {
  */
 export type GetNetworkInfoResult = any
 
-export function GetNetworkInfo(...params: any[]): GetNetworkInfoRequest {
-  return params.length === 0 ? { method: 'getnetworkinfo' } : { method: 'getnetworkinfo', params }
+export function GetNetworkInfo(): GetNetworkInfoRequest {
+  return { method: 'getnetworkinfo' }
 }
