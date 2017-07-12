@@ -22,9 +22,10 @@
     "test": "cross-env TS_NODE_PROJECT=test nyc --reporter=text-summary mocha test/test.ts --compilers ts:ts-node/register",
     "docs": "cd src && typedoc --out ../dist/docs",
     "clean": "rimraf dist",
-    "ci:build": "tsc --project src && tsc --project test",
+    "ci:build": "npm run build",
     "ci:lint": "tslint --project src && tslint --project test",
-    "ci:test": "cross-env TS_NODE_PROJECT=test nyc --reporter=json mocha test/test.ts --compilers ts:ts-node/register && codecov -f dist/coverage/coverage-final.json"
+    "ci:test": "cross-env TS_NODE_PROJECT=test nyc --reporter=json mocha test/test.ts --compilers ts:ts-node/register && codecov -f dist/coverage/coverage-final.json",
+    "ci:docs": "npm run docs"
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
