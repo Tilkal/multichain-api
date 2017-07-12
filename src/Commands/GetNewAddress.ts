@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetNewAddressRequest extends RpcRequest {
   readonly method: 'getnewaddress'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetNewAddressResponse extends RpcResponse {
  */
 export type GetNewAddressResult = any
 
-export function GetNewAddress(...params: any[]): GetNewAddressRequest {
-  return params.length === 0 ? { method: 'getnewaddress' } : { method: 'getnewaddress', params }
+export function GetNewAddress(): GetNewAddressRequest {
+  return { method: 'getnewaddress' }
 }
