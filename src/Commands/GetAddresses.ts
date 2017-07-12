@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetAddressesRequest extends RpcRequest {
   readonly method: 'getaddresses'
-  readonly params?: any[]
+  readonly params?: [boolean]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetAddressesResponse extends RpcResponse {
  */
 export type GetAddressesResult = any
 
-export function GetAddresses(...params: any[]): GetAddressesRequest {
-  return params.length === 0 ? { method: 'getaddresses' } : { method: 'getaddresses', params }
+export function GetAddresses(verbose?: boolean): GetAddressesRequest {
+  return verbose === undefined ? { method: 'getaddresses' } : { method: 'getaddresses', params: [verbose] }
 }
