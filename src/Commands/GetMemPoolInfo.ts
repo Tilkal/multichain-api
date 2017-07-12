@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetMemPoolInfoRequest extends RpcRequest {
   readonly method: 'getmempoolinfo'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetMemPoolInfoResponse extends RpcResponse {
  */
 export type GetMemPoolInfoResult = any
 
-export function GetMemPoolInfo(...params: any[]): GetMemPoolInfoRequest {
-  return params.length === 0 ? { method: 'getmempoolinfo' } : { method: 'getmempoolinfo', params }
+export function GetMemPoolInfo(): GetMemPoolInfoRequest {
+  return { method: 'getmempoolinfo' }
 }
