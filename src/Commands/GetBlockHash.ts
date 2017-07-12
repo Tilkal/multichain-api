@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetBlockHashRequest extends RpcRequest {
   readonly method: 'getblockhash'
-  readonly params?: any[]
+  readonly params: [number]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetBlockHashResponse extends RpcResponse {
  */
 export type GetBlockHashResult = any
 
-export function GetBlockHash(...params: any[]): GetBlockHashRequest {
-  return params.length === 0 ? { method: 'getblockhash' } : { method: 'getblockhash', params }
+export function GetBlockHash(height: number): GetBlockHashRequest {
+  return { method: 'getblockhash', params: [height] }
 }
