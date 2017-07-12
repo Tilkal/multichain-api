@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface DumpPrivKeyRequest extends RpcRequest {
   readonly method: 'dumpprivkey'
-  readonly params?: any[]
+  readonly params: [string]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface DumpPrivKeyResponse extends RpcResponse {
  */
 export type DumpPrivKeyResult = any
 
-export function DumpPrivKey(...params: any[]): DumpPrivKeyRequest {
-  return params.length === 0 ? { method: 'dumpprivkey' } : { method: 'dumpprivkey', params }
+export function DumpPrivKey(address: string): DumpPrivKeyRequest {
+  return { method: 'dumpprivkey', params: [address] }
 }
