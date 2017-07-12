@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetAddressTransactionRequest extends RpcRequest {
   readonly method: 'getaddresstransaction'
-  readonly params?: any[]
+  readonly params: [string, string, boolean | undefined]
 }
 
 /**
@@ -21,6 +21,7 @@ export interface GetAddressTransactionResponse extends RpcResponse {
  */
 export type GetAddressTransactionResult = any
 
-export function GetAddressTransaction(...params: any[]): GetAddressTransactionRequest {
-  return params.length === 0 ? { method: 'getaddresstransaction' } : { method: 'getaddresstransaction', params }
+export function GetAddressTransaction(address: string, txId: string, verbose?: boolean): GetAddressTransactionRequest {
+  const params: any = [address, txId, verbose].filter(v => v !== undefined)
+  return { method: 'getaddresstransaction', params }
 }
