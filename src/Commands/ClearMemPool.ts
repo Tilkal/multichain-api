@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface ClearMemPoolRequest extends RpcRequest {
   readonly method: 'clearmempool'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface ClearMemPoolResponse extends RpcResponse {
  */
 export type ClearMemPoolResult = any
 
-export function ClearMemPool(...params: any[]): ClearMemPoolRequest {
-  return params.length === 0 ? { method: 'clearmempool' } : { method: 'clearmempool', params }
+export function ClearMemPool(): ClearMemPoolRequest {
+  return { method: 'clearmempool' }
 }
