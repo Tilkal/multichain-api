@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface EncryptWalletRequest extends RpcRequest {
   readonly method: 'encryptwallet'
-  readonly params?: any[]
+  readonly params: [string]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface EncryptWalletResponse extends RpcResponse {
  */
 export type EncryptWalletResult = any
 
-export function EncryptWallet(...params: any[]): EncryptWalletRequest {
-  return params.length === 0 ? { method: 'encryptwallet' } : { method: 'encryptwallet', params }
+export function EncryptWallet(passphrase: string): EncryptWalletRequest {
+  return { method: 'encryptwallet', params: [passphrase] }
 }
