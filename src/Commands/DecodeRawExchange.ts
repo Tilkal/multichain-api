@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface DecodeRawExchangeRequest extends RpcRequest {
   readonly method: 'decoderawexchange'
-  readonly params?: any[]
+  readonly params: [string, boolean | undefined]
 }
 
 /**
@@ -21,6 +21,7 @@ export interface DecodeRawExchangeResponse extends RpcResponse {
  */
 export type DecodeRawExchangeResult = any
 
-export function DecodeRawExchange(...params: any[]): DecodeRawExchangeRequest {
-  return params.length === 0 ? { method: 'decoderawexchange' } : { method: 'decoderawexchange', params }
+export function DecodeRawExchange(transaction: string, verbose?: boolean): DecodeRawExchangeRequest {
+  const params: any = [transaction, verbose].filter(v => v !== undefined)
+  return { method: 'decoderawexchange', params }
 }
