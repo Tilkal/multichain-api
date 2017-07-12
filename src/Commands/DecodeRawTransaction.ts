@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface DecodeRawTransactionRequest extends RpcRequest {
   readonly method: 'decoderawtransaction'
-  readonly params?: any[]
+  readonly params: [string]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface DecodeRawTransactionResponse extends RpcResponse {
  */
 export type DecodeRawTransactionResult = any
 
-export function DecodeRawTransaction(...params: any[]): DecodeRawTransactionRequest {
-  return params.length === 0 ? { method: 'decoderawtransaction' } : { method: 'decoderawtransaction', params }
+export function DecodeRawTransaction(transaction: string): DecodeRawTransactionRequest {
+  return { method: 'decoderawtransaction', params: [transaction] }
 }
