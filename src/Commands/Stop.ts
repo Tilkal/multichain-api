@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface StopRequest extends RpcRequest {
   readonly method: 'stop'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface StopResponse extends RpcResponse {
  */
 export type StopResult = any
 
-export function Stop(...params: any[]): StopRequest {
-  return params.length === 0 ? { method: 'stop' } : { method: 'stop', params }
+export function Stop(): StopRequest {
+  return { method: 'stop' }
 }
