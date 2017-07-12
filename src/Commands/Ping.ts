@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface PingRequest extends RpcRequest {
   readonly method: 'ping'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface PingResponse extends RpcResponse {
  */
 export type PingResult = any
 
-export function Ping(...params: any[]): PingRequest {
-  return params.length === 0 ? { method: 'ping' } : { method: 'ping', params }
+export function Ping(): PingRequest {
+  return { method: 'ping' }
 }
