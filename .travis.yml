@@ -12,6 +12,7 @@ script:
 
 before_deploy:
   - npm run ci:docs
+  - touch /dist/docs/.nojekyll
   - mv dist/src/* .
 
 deploy:
