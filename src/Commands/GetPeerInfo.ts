@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetPeerInfoRequest extends RpcRequest {
   readonly method: 'getpeerinfo'
-  readonly params?: any[]
+  readonly params?: undefined
 }
 
 /**
@@ -21,6 +21,6 @@ export interface GetPeerInfoResponse extends RpcResponse {
  */
 export type GetPeerInfoResult = any
 
-export function GetPeerInfo(...params: any[]): GetPeerInfoRequest {
-  return params.length === 0 ? { method: 'getpeerinfo' } : { method: 'getpeerinfo', params }
+export function GetPeerInfo(): GetPeerInfoRequest {
+  return { method: 'getpeerinfo' }
 }
