@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface CreateKeyPairsRequest extends RpcRequest {
   readonly method: 'createkeypairs'
-  readonly params?: any[]
+  readonly params?: [number]
 }
 
 /**
@@ -21,6 +21,6 @@ export interface CreateKeyPairsResponse extends RpcResponse {
  */
 export type CreateKeyPairsResult = any
 
-export function CreateKeyPairs(...params: any[]): CreateKeyPairsRequest {
-  return params.length === 0 ? { method: 'createkeypairs' } : { method: 'createkeypairs', params }
+export function CreateKeyPairs(count?: number): CreateKeyPairsRequest {
+  return count === undefined ? { method: 'createkeypairs' } : { method: 'createkeypairs', params: [count] }
 }
