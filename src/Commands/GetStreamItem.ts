@@ -6,7 +6,7 @@ import { RpcResponse } from '../RpcResponse'
  */
 export interface GetStreamItemRequest extends RpcRequest {
   readonly method: 'getstreamitem'
-  readonly params?: any[]
+  readonly params: [string, string, boolean | undefined]
 }
 
 /**
@@ -21,6 +21,7 @@ export interface GetStreamItemResponse extends RpcResponse {
  */
 export type GetStreamItemResult = any
 
-export function GetStreamItem(...params: any[]): GetStreamItemRequest {
-  return params.length === 0 ? { method: 'getstreamitem' } : { method: 'getstreamitem', params }
+export function GetStreamItem(stream: string, txId: string, verbose?: boolean): GetStreamItemRequest {
+  const params: any = [stream, txId, verbose].filter(v => v !== undefined)
+  return { method: 'getstreamitem', params }
 }
