@@ -58,8 +58,8 @@ client(GetBlock(42))
 
 ## Resources
 
-* [Website](https://tilkal.github.io/multichain-api/)
-* [API Documentation](https://tilkal.github.io/multichain-api/docs/)
+* [Wiki](https://github.com/Tilkal/multichain-api/wiki)
+* [API Documentation](https://tilkal.github.io/multichain-api/)
 
 ## License
 
