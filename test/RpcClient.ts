@@ -43,7 +43,7 @@ describe('/RpcClient', function() {
         .callsArgWith(1, message)
         .returns(new PassThrough())
 
-      try{
+      try {
         const promise = RpcClient({ password: 'password' })(Help())
         message.emit('error', new Error())
         const result = await promise
