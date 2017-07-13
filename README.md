@@ -1,7 +1,9 @@
 # MultiChain API
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![NPM Version](https://badge.fury.io/js/multichain-api.svg)](https://www.npmjs.com/package/multichain-api)
 [![Build Status](https://travis-ci.org/Tilkal/multichain-api.svg?branch=master)](https://travis-ci.org/Tilkal/multichain-api)
-[![codecov](https://codecov.io/gh/Tilkal/multichain-api/branch/master/graph/badge.svg)](https://codecov.io/gh/Tilkal/multichain-api)
+[![Code Coverage](https://codecov.io/gh/Tilkal/multichain-api/branch/master/graph/badge.svg)](https://codecov.io/gh/Tilkal/multichain-api)
 
 **MultiChain API** is an unofficial [MultiChain](http://www.multichain.com/) client for *Node.js* written in *TypeScript*.
 
