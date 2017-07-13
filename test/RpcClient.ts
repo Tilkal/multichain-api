@@ -48,7 +48,7 @@ describe('/RpcClient', function() {
         message.emit('error', new Error())
         const result = await promise
         throw new Error('Unreachable')
-      } catch(error) {
+      } catch (error) {
         expect(error)
           .to.be.an.instanceof(Error)
           .and.to.not.be.an.instanceof(RpcError)
@@ -70,7 +70,7 @@ describe('/RpcClient', function() {
       try {
         const response = await RpcClient({ password: 'password' })(Help())
         throw new Error('Unreachable')
-      } catch(error) {
+      } catch (error) {
         expect(error).to.be.an.instanceof(RpcError)
       }
     },
