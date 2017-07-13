@@ -17,8 +17,9 @@ export interface ConnectionSettings {
 
   /**
    * IP address or hostname of the node to connect to.
+   * @default 'localhost'
    */
-  readonly host: string
+  readonly host?: string
 
   /**
    * Port number of the node to connect to.
@@ -779,7 +780,7 @@ export interface RpcClientInstance {
 export function RpcClient(settings: ConnectionSettings): RpcClientInstance {
   const options: http.RequestOptions = {
     protocol: `${ settings.protocol || 'http' }:`,
-    host: settings.host,
+    host: settings.host || 'localhost',
     port: settings.port || 8570,
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
