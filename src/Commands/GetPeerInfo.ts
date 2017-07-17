@@ -13,13 +13,35 @@ export interface GetPeerInfoRequest extends RpcRequest {
  * JSON-RPC response for the *getpeerinfo* command.
  */
 export interface GetPeerInfoResponse extends RpcResponse {
-  readonly result: GetPeerInfoResult | null
+  readonly result: GetPeerInfoResult[] | null
 }
 
 /**
  * Result of the *getpeerinfo* command.
  */
-export type GetPeerInfoResult = any
+export interface GetPeerInfoResult {
+  id: number
+  addr: string
+  addrlocal: string
+  services: string
+  lastsend: number
+  lastrecv: number
+  bytessent: number
+  bytesrecv: number
+  conntime: number
+  pingtime: number
+  version: number
+  subver: string
+  handshakelocal: string
+  handshake: string
+  inbound: boolean
+  startingheight: number
+  banscore: number
+  synced_headers: number
+  synced_blocks: number
+  inflight: number[]
+  whitelisted: boolean
+}
 
 export function GetPeerInfo(): GetPeerInfoRequest {
   return { method: 'getpeerinfo' }
