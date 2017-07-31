@@ -1,6 +1,7 @@
 import * as http from 'http'
 import * as https from 'https'
 import * as Cmd from './Commands'
+import { MultiChainError } from './MultiChainError'
 import { RpcError } from './RpcError'
 import { RpcRequest } from './RpcRequest'
 import { RpcResponse } from './RpcResponse'
@@ -802,11 +803,21 @@ export function RpcClient(settings: ConnectionSettings): RpcClientInstance {
       }
 
       function HandleResponse(message: http.IncomingMessage, body: string) {
+        let response: RpcResponse
+
         try {
-          resolve(JSON.parse(body))
+          response = JSON.parse(body)
         } catch (error) {
           reject(new RpcError(Number(message.statusCode), String(message.statusMessage), message.headers, body))
+          return
         }
+
+        if (response.error !== null) {
+          reject(new MultiChainError(response))
+          return
+        }
+
+        resolve(response)
       }
 
       SendRequest(options, HandleMessage)

@@ -3,7 +3,8 @@ import * as http from 'http'
 import * as sinon from 'sinon'
 import { PassThrough } from 'stream'
 import { Help } from '../src/Commands'
-import { RpcClient, RpcError, RpcResponse } from '../src/main'
+import { MultiChainError, RpcClient, RpcError, RpcResponse } from '../src/main'
+import { MockRpcResponse } from './test-helpers'
 
 describe('/RpcClient', function() {
   beforeEach(function() {
@@ -72,6 +73,26 @@ describe('/RpcClient', function() {
         throw new Error('Unreachable')
       } catch (error) {
         expect(error).to.be.an.instanceof(RpcError)
+      }
+    },
+  )
+
+  it(
+    'RpcClient should throw a MultiChainError when the request is successful but the response contains an error',
+    async function() {
+      const r = MockRpcResponse({ code: 1, message: 'Error description.' })
+      const message = new PassThrough()
+      message.end(JSON.stringify(r))
+
+      this.request
+        .callsArgWith(1, message)
+        .returns(new PassThrough())
+
+      try {
+        const response = await RpcClient({ password: 'password' })(Help())
+        throw new Error('Unreachable')
+      } catch (error) {
+        expect(error).to.be.an.instanceof(Error)
       }
     },
   )
