@@ -28,14 +28,14 @@
     "ci:docs": "npm run docs"
   },
   "devDependencies": {
-    "@types/chai": "^4.0.1",
+    "@types/chai": "^4.0.2",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^8.0.17",
+    "@types/node": "^8.0.19",
     "@types/sinon": "^2.3.3",
     "chai": "^4.1.0",
     "codecov": "^2.2.0",
-    "cross-env": "^5.0.1",
-    "mocha": "^3.4.2",
+    "cross-env": "^5.0.2",
+    "mocha": "^3.5.0",
     "nyc": "^11.1.0",
     "rimraf": "^2.6.1",
     "sinon": "^2.4.1",
