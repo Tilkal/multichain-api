@@ -13,13 +13,15 @@ export interface GetPeerInfoRequest extends RpcRequest {
  * JSON-RPC response for the *getpeerinfo* command.
  */
 export interface GetPeerInfoResponse extends RpcResponse {
-  readonly result: GetPeerInfoResult[] | null
+  readonly result: GetPeerInfoResult | null
 }
 
 /**
  * Result of the *getpeerinfo* command.
  */
-export interface GetPeerInfoResult {
+export type GetPeerInfoResult = GetPeerInfoItem[]
+
+export interface GetPeerInfoItem {
   id: number
   addr: string
   addrlocal: string
