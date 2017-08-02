@@ -48,6 +48,7 @@ export interface GetInfoResult {
   relayfee: number
   errors: string
 }
+
 export function GetInfo(): GetInfoRequest {
   return { method: 'getinfo' }
 }
