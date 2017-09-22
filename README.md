@@ -7,6 +7,8 @@
 
 **MultiChain API** is an unofficial [MultiChain](http://www.multichain.com/) client for *Node.js* written in *TypeScript*.
 
+> 💡 The `alpha` status only denotes that the unit tests are incomplete, but the client should be fully functional.
+
 ## Features
 
 * `Promise`-based functional API
