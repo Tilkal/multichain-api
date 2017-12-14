@@ -20,7 +20,7 @@
     "build": "tsc --project src && tsc --project test",
     "lint": "tslint --fix --project src && tslint --fix --project test",
     "test": "cross-env TS_NODE_PROJECT=test nyc --reporter=text-summary mocha test/test.ts --compilers ts:ts-node/register",
-    "docs": "cd src && typedoc --out ../dist/docs",
+    "docs": "cd src && typedoc --out ../dist/docs .",
     "clean": "rimraf dist",
     "ci:build": "npm run build",
     "ci:lint": "tslint --project src && tslint --project test",
