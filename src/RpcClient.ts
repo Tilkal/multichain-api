@@ -785,6 +785,13 @@ export interface RpcClientInstance {
    * @returns A promise of the JSON-RPC response to the *walletpassphrasechange* command.
    */
   (request: Cmd.WalletPassphraseChangeRequest): Promise<Cmd.WalletPassphraseChangeResponse>
+
+  /**
+   * Sends a command to the node.
+   * @param request JSON-RPC request for the command.
+   * @returns A promise of the JSON-RPC response to the command.
+   */
+  (request: RpcRequest): Promise<RpcResponse>
 }
 
 /**
