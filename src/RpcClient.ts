@@ -87,6 +87,13 @@ export interface RpcClientInstance {
   (request: Cmd.AppendRawTransactionRequest): Promise<Cmd.AppendRawTransactionResponse>
 
   /**
+   * Sends a [[ApproveFrom]] command to the node.
+   * @param request JSON-RPC request for the *approvefrom* command.
+   * @returns A promise of the JSON-RPC response to the *approvefrom* command.
+   */
+  (request: Cmd.ApproveFromRequest): Promise<Cmd.ApproveFromResponse>
+
+  /**
    * Sends a [[BackupWallet]] command to the node.
    * @param request JSON-RPC request for the *backupwallet* command.
    * @returns A promise of the JSON-RPC response to the *backupwallet* command.
@@ -561,6 +568,13 @@ export interface RpcClientInstance {
    * @returns A promise of the JSON-RPC response to the *listunspent* command.
    */
   (request: Cmd.ListUnspentRequest): Promise<Cmd.ListUnspentResponse>
+
+  /**
+   * Sends a [[ListUpgrades]] command to the node.
+   * @param request JSON-RPC request for the *listupgrades* command.
+   * @returns A promise of the JSON-RPC response to the *listupgrades* command.
+   */
+  (request: Cmd.ListUpgradesRequest): Promise<Cmd.ListUpgradesResponse>
 
   /**
    * Sends a [[ListWalletTransactions]] command to the node.
