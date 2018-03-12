@@ -32,7 +32,7 @@ const client = RpcClient({
   protocol: 'http',
   host: '127.0.0.1',
   port: 8570,
-  user: 'multichainrpc'
+  username: 'multichainrpc'
   password: '...'
 })
 
@@ -44,14 +44,14 @@ client(GetBlock(42))
 *JavaScript* example:
 
 ```javascript
-const GetBlock = require('multichain-api/Commands/GetBlock').GetBlock
-const RpcClient = require('multichain-api/RpcClient').RpcClient
+const { GetBlock } = require('multichain-api/Commands/GetBlock')
+const { RpcClient } = require('multichain-api/RpcClient')
 
 const client = RpcClient({
   protocol: 'http',
   host: '127.0.0.1',
   port: 8570,
-  user: 'multichainrpc'
+  username: 'multichainrpc'
   password: '...'
 })
 
