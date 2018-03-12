@@ -16,6 +16,8 @@ before_deploy:
   - mv dist/src/* .
 
 deploy:
+  edge:
+    branch: v1.8.47
   - provider: pages
     local_dir: dist/docs
     github_token:
