@@ -290,6 +290,13 @@ export interface RpcClientInstance {
   (request: Cmd.GetMemPoolInfoRequest): Promise<Cmd.GetMemPoolInfoResponse>
 
   /**
+   * Sends a [[GetMiningInfo]] command to the node.
+   * @param request JSON-RPC request for the *getmininginfo* command.
+   * @returns A promise of the JSON-RPC response to the *getmininginfo* command.
+   */
+  (request: Cmd.GetMiningInfoRequest): Promise<Cmd.GetMiningInfoResponse>
+
+  /**
    * Sends a [[GetMultiBalances]] command to the node.
    * @param request JSON-RPC request for the *getmultibalances* command.
    * @returns A promise of the JSON-RPC response to the *getmultibalances* command.
