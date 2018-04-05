@@ -38,6 +38,7 @@ describe('/Commands', function() {
     'GetBlockHash',
     'GetInfo',
     'GetMemPoolInfo',
+    'GetMiningInfo',
     'GetMultiBalances',
     'GetNetworkInfo',
     'GetNewAddress',
