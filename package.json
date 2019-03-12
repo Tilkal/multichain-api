@@ -1,6 +1,6 @@
 {
   "name": "multichain-api",
-  "version": "1.0.0-alpha.12",
+  "version": "1.0.0-alpha.13",
   "description": "MultiChain JSON-RPC Client",
   "keywords": [
     "MultiChain",
