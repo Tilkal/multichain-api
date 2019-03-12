@@ -1,39 +1,34 @@
 language: node_js
-
 node_js:
-  - '9'
-  - '8'
-  - '6'
-
+- '9'
+- '8'
+- '6'
 script:
-  - npm run ci:build
-  - npm run ci:lint
-  - npm run ci:test
-
+- npm run ci:build
+- npm run ci:lint
+- npm run ci:test
 before_deploy:
-  - npm run ci:docs
-  - touch dist/docs/.nojekyll
-  - mv dist/src/* .
-
+- npm run ci:docs
+- touch dist/docs/.nojekyll
+- mv dist/src/* .
 deploy:
-    - provider: pages
-      edge:
-        branch: v1.8.47
-      local_dir: dist/docs
-      github_token:
-        secure: LWfUtVyHJFGNTJ+dw/vqJCFNKVeiOR3Hb7C7Cwzp8ej06Jb6MAVTkLkvc0AFjpXsQyWNy1gifuav3CbD5c0AtvoV0ow7w6D/RlLpfUzIS2wWUYA0PvbnR7/JVv0+QF9aL7DfkZBVD16PI0aAX7xWVPscyHF4I+uS0WKJAm71wALcxODZrr+ClJSnpIYw5Ld3EuBTbtmbOXz+tg7ZlbFAeiBXIi/oEcnEh9lobB9SyLjH3q8ExWh/Lx/QRp+4MAc4XnRixlMqLO46O6GD4hmljlI7vNJZGjaEc9FmwYLy6Glzfp1ft376k7EiwhMLge9lJLaxL4Xik9AR0RyVyRjiywWmGI/r5jW2ajFyfU9GoU1B6SzUEayRoELAPp2s9/4p9EC2dlbHpra8UM80sGtV5JY59X76gX7cQb7ULSiX/J943UB3ZSBwQaDd45iubVsnEuvdeQgG+jsF2Q+zJB56oWlcVRyjN5AEHYmrrb7noUHhHIv8br3bHUKPaI7JG3i+5GhObtaz0uf4IzukBrvkDq/HfAYjRKioZuFAIHpnpXbL28S+DiTkYzSD6n0zKzCEeGLvA9WMXeQNSVez6gV53DDRO0kaOoaWmzAg2VDulH934AXnbBjvZZk4D9Vtz20SwFCyzXqTKFlmXB3F7RXs5RZ/Tmke/hIXKH2MgIM/jMw=
-      skip_cleanup: true
-      on:
-        branch: master
-    - provider: npm
-      email:
-        secure: dkxn1aw2fYrx8QYkrY+IbxGTZO1oMozYDEcG/wtTtg4S7U/reVaCQhB5gVHjQltmnywlUWHcwcJo/3I8DGcJ2E/Ws/H+s2tHNI6Kn/YSOukeuSDum4a6tsbiHAsMHNF44nVaBUUW5pYGxA9nwI4sNOt3EMOe8ayGu4BHDYz28V3hCyKIisDzuPorV5Zyb8muiUzc0quawvCrOR2BdVv0jV/gqyCiuomhXJSBHTWpeQttDU4cRg9TAsMRXEJI02TwWFlTvc+fMuFRFPVyeYQODGgX5KWyRdzjzIEOcs+C7PNxElAI+5TM8ItAS+PWtqjnbLb92seYKZ+3aQrRmzuxIZPEKGpLn7x77oIjM4F46uKignMH3ycXoCKpte8DxFn4PJ6kuxpqeV6ciJsX+fpBU7e9AaET6XK1JOTVzRzE2t/ajCGoadKtgtch6seUL/U/NyHCCxC1DZZE0yczINWw6US98t5w8A8O7Cn+Wx7AFdGXVIQ0mi5HPwBwCtIGSktjOGl/qq7ITOLHBDfzY/mWh+eEBUEuOEhvZIH3dS+m+31F8PBnySBKUrSn5768t/TmRBHIjwL/SaEGAGeApYhAQ29c/VokJ7GskuzxEZVXtvSI9yCadsoJlPQK+kQBffgVZxSScdyBg8Wtd6++sj8q7Tkk0XileW6OU0IB2l4tb0c=
-      api_key:
-        secure: k2gvkkyVeAF2np5E8knpPI4Ed0nwMy8mtFhBeTXE8RSa4H/fO9zFYPYVCZ9W1OysaBZ2gjgsmXMIloG+bJYXxFF/HkeuJ96Zqj7tB1seGXOWEW8RTPtv7Aswymy7ohKJ1+EdwfBwfn35pKq3/pp7ggs/8qvhOU+KcLumDw7W6VDPnX3eDFRBd0LpYL0oC8lMSFSSR8tfBBnVrcdAi7ZMleSl5nHDK6RpnNHQbaM6gYcqMmSby+DmD307e9Hw79uK3d9UbI7KJ8YYPhUudYh+cKCabG3c8CErKPkRQ6+LDxOmsjYwiC2hBgFd6JSmpcpiphA9FAKSizw713fNqisPuWTMPzXYMzqeuVURA2SZZG0rahwXFJURKoPrSUTmISDjK5Bp5rKwikV71To2vqJ2sRNoILJatLQ+wg85oFaFXVQv4uxtva+sxxogFND7gEzLhvCkrWnuMpBzfUxdR7OLIbMcbtWs2o0BTekRFazv+ZC/zged2gYJxNbIbTpgL97Zb9Se7w0otcOwyXs3u6WRA9y/QmPp6P4TlwAyhNe3efC1DsbYhQqNh/wMCfXRwZkR5jXxM1xoL+Teq4ViKVHsnEP9zmKdbaBpIpgP2jpk293iA+2J2vLHnvfNYSap7BoB4b5XMce37oTh9g6iTr7cBGRpNq9EKNAqKh/IWxn0XRk=
-      skip_cleanup: true
-      on:
-        tags: true
-
+  - provider: pages
+    edge:
+      branch: v1.8.47
+    local_dir: dist/docs
+    github_token:
+      secure: LWfUtVyHJFGNTJ+dw/vqJCFNKVeiOR3Hb7C7Cwzp8ej06Jb6MAVTkLkvc0AFjpXsQyWNy1gifuav3CbD5c0AtvoV0ow7w6D/RlLpfUzIS2wWUYA0PvbnR7/JVv0+QF9aL7DfkZBVD16PI0aAX7xWVPscyHF4I+uS0WKJAm71wALcxODZrr+ClJSnpIYw5Ld3EuBTbtmbOXz+tg7ZlbFAeiBXIi/oEcnEh9lobB9SyLjH3q8ExWh/Lx/QRp+4MAc4XnRixlMqLO46O6GD4hmljlI7vNJZGjaEc9FmwYLy6Glzfp1ft376k7EiwhMLge9lJLaxL4Xik9AR0RyVyRjiywWmGI/r5jW2ajFyfU9GoU1B6SzUEayRoELAPp2s9/4p9EC2dlbHpra8UM80sGtV5JY59X76gX7cQb7ULSiX/J943UB3ZSBwQaDd45iubVsnEuvdeQgG+jsF2Q+zJB56oWlcVRyjN5AEHYmrrb7noUHhHIv8br3bHUKPaI7JG3i+5GhObtaz0uf4IzukBrvkDq/HfAYjRKioZuFAIHpnpXbL28S+DiTkYzSD6n0zKzCEeGLvA9WMXeQNSVez6gV53DDRO0kaOoaWmzAg2VDulH934AXnbBjvZZk4D9Vtz20SwFCyzXqTKFlmXB3F7RXs5RZ/Tmke/hIXKH2MgIM/jMw=
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: npm
+    email:
+      secure: dkxn1aw2fYrx8QYkrY+IbxGTZO1oMozYDEcG/wtTtg4S7U/reVaCQhB5gVHjQltmnywlUWHcwcJo/3I8DGcJ2E/Ws/H+s2tHNI6Kn/YSOukeuSDum4a6tsbiHAsMHNF44nVaBUUW5pYGxA9nwI4sNOt3EMOe8ayGu4BHDYz28V3hCyKIisDzuPorV5Zyb8muiUzc0quawvCrOR2BdVv0jV/gqyCiuomhXJSBHTWpeQttDU4cRg9TAsMRXEJI02TwWFlTvc+fMuFRFPVyeYQODGgX5KWyRdzjzIEOcs+C7PNxElAI+5TM8ItAS+PWtqjnbLb92seYKZ+3aQrRmzuxIZPEKGpLn7x77oIjM4F46uKignMH3ycXoCKpte8DxFn4PJ6kuxpqeV6ciJsX+fpBU7e9AaET6XK1JOTVzRzE2t/ajCGoadKtgtch6seUL/U/NyHCCxC1DZZE0yczINWw6US98t5w8A8O7Cn+Wx7AFdGXVIQ0mi5HPwBwCtIGSktjOGl/qq7ITOLHBDfzY/mWh+eEBUEuOEhvZIH3dS+m+31F8PBnySBKUrSn5768t/TmRBHIjwL/SaEGAGeApYhAQ29c/VokJ7GskuzxEZVXtvSI9yCadsoJlPQK+kQBffgVZxSScdyBg8Wtd6++sj8q7Tkk0XileW6OU0IB2l4tb0c=
+    api_key:
+      secure: ULbdy+g47DeXg7SCeZzl+eN/Tbg6O2DRdBxTJuu26zVmt1x4INl0wY0kIbs7Cw0NXKPZO+xzHiOSaRt+PRjCNxpvYrbnbxwNMZrnpA5kQjzps3oG0fTRLVD5bOdFsOEJRXWQ99bXNVeiRwlYBcnSgzrmwIwF6q5UL5fBSBqkRw4mNYaCBuufNxOY1UWjNU5q0VZd70ZAKpUbrNyighK/U0JPpWd4gWdIPjhw9IlFZLZO3Ri9qEJC0FfDEHnIDmyIu0sK6fy9mKlVZQY/Z6yiypcYH1W7ok5+BkAOnsRWIv442+YZjoe7EcGP7IWg3bMqD9w7kQB6SAJNc6EGSJcA60t9pFAyUcEpIfsv4lWY7fAYJEmDZpDCfEXJutmZHeI8vu+/K/SG9hV1v+XP1Cs/+435K82c5G8aL61aN7A3qQIkBKrdguB+naz0BdIRqmoZD+sM7GR3iYGtHWnLcftKNhETHq4ZydXNRTHoQkIcoobVB+UHhbJZWtlWU+PTguF3EFsVW7ldCs4zlZA2VjhrQQXhl8PHMc5b4I7BqRCVGPuIgmI38XI3o/jgTUOCWXaTFseEFf67+BWtZ5SEpRidWU8VI794WvTda1mK6BnhqXX5CJ5cUXqjTS6eMIKpq8ypZQxSikDVhAvny/asTqLKjh7smGUI3w9pMxGfNl7J0tI=
+    skip_cleanup: true
+    on:
+      tags: true
 notifications:
   email: false
   slack:
